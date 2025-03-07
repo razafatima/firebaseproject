@@ -1,0 +1,93 @@
+.pokemon-list {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .pokemon-list h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .pokemon-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-button, .update-button, .edit-button, .delete-button {
+    padding: 10px 15px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .update-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit-button {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .add-button:hover, .update-button:hover, .edit-button:hover, .delete-button:hover {
+    opacity: 0.8;
+  }
+  
+  .pokemon-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .pokemon-table th, .pokemon-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .pokemon-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .pokemon-image {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  .pokemon-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  .error {
+    text-align: center;
+    font-size: 20px;
+    color: #dc3545;
+  }
