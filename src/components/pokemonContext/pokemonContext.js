@@ -14,7 +14,7 @@ export const PokemonProvider = ({ children }) => {
         .then((res) => res.json())
         .then(async (data) => {
           const details = await Promise.all(
-            data.results.map(async (pokemon, index) => {
+            data.results.map(async (pokemon) => {
               const res = await fetch(pokemon.url);
               const details = await res.json();
               return {
@@ -23,28 +23,29 @@ export const PokemonProvider = ({ children }) => {
                 image: details.sprites.front_default,
                 height: details.height,
                 weight: details.weight,
-                abilities: details.abilities.map((a) => a.ability.name).join(", "),
-              };
+                abilities: details.abilities.map((a) => a.ability.name),
+            };
             })
           );
           setPokemons(details);
           localStorage.setItem("pokemons", JSON.stringify(details));
         });
     }
-  }, [pokemons.length]);
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("pokemons", JSON.stringify(pokemons));
   }, [pokemons]);
 
   const addPokemon = (name, height, weight) => {
+    const newId = pokemons.length > 0 ? Math.max(...pokemons.map(pokemon => pokemon.id)) + 1 : 1; // Generate new ID
     const newPokemon = {
-      id: pokemons.length + 1,
+      id: newId,
       name,
       height,
       weight,
-      image: "https://via.placeholder.com/100",
-      abilities: ["Unknown Ability"],
+      image: "https://via.placeholder.com/100", // Placeholder image
+      abilities: ["Unknown Ability"], // Default abilities
     };
     setPokemons([...pokemons, newPokemon]);
   };
