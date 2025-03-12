@@ -31,7 +31,7 @@ const Login = () => {
       console.log("User logged in:", userCredential.user);
 
       toast.success("Login successful! Redirecting...");
-      navigate('/pokemonList2'); // Redirect user to the demo page
+      navigate('/pokemonList2'); 
     } catch (error) {
       console.error("Login error:", error);
 

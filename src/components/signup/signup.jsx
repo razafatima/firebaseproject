@@ -40,7 +40,6 @@ const Signup = () => {
           description: "Account created successfully! Redirecting to login...",
         });
         
-        // Redirect to login page after successful signup
         navigate('/login');
       } catch (error) {
         console.error('Signup error:', error);
