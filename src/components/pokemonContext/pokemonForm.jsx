@@ -18,7 +18,10 @@ const AddPokemonForm = () => {
   };
 
   return (
+    
     <form onSubmit={handleSubmit}>
+
+      <h2>Pokemon List</h2>
       <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
       <input type="number" placeholder="Height" value={height} onChange={(e) => setHeight(e.target.value)} required />
       <input type="number" placeholder="Weight" value={weight} onChange={(e) => setWeight(e.target.value)} required />
