@@ -12,71 +12,114 @@ html, body {
     align-items: center;
 }
 
-
-.form{
+.form {
     background-color: #C8C8C8;
     width: 40%;
     height: 80%;
     border-radius: 2rem;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.heading{
+.heading {
     font-family: 'Times New Roman', Times, serif;
     font-size: 3rem;
     text-align: center;
     margin-top: 15px;
-    color: 	#606060;
+    color: #606060;
 }
 
 .labelinputcontainer {
     display: flex;
     flex-direction: column;
-    gap: 5px; 
+    gap: 5px;
     width: 100%;
     margin-bottom: 15px;
-    height: 100px;
 }
-.label{
+
+.label {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.5rem;
     color: #606060;
-    position: relative;
-    left: 40%;
-    top: 30%;
-    
-    
+    text-align: center;
 }
-.input{
-    width: 60%;
+
+.input {
+    width: 80%;
     height: 40px;
-    margin-left: 20px;
+    margin: 0 auto;
     padding: 5px;
     box-sizing: border-box;
-    position:relative;
-    top: 40%;
-    left: 15%;
     border-radius: 1rem;
-    border-width: 1px;
+    border: 1px solid #606060;
 }
-.btn{
+
+.btncontainer {
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 10px;
-    width: 40%;
-    height: 70%; 
-    position: relative;
-    left: 30%;
-    top: 70%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 50%;
+    padding: 10px;
     color: #606060;
     border-radius: 1rem;
     font-size: 1.25rem;
-    border-width: 1px;
-    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #606060;
+    text-align: center;
+    cursor: pointer;
 }
-.btncontainer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 10%;
+
+@media (max-width: 1024px) {
+    .form {
+        width: 60%;
+        height: 75%;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .input {
+        width: 85%;
+    }
+    .btn {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        width: 80%;
+        height: auto;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .input {
+        width: 90%;
+    }
+    .btn {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form {
+        width: 90%;
+        padding: 15px;
+    }
+    .heading {
+        font-size: 1.8rem;
+    }
+    .label {
+        font-size: 1.2rem;
+    }
+    .input {
+        width: 100%;
+        height: 35px;
+    }
+    .btn {
+        width: 80%;
+        font-size: 1rem;
+    }
 }

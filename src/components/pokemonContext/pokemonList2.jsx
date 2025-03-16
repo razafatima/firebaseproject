@@ -15,6 +15,7 @@ const PokemonTable = () => {
   return (
     <div>
       <AddPokemonForm /> 
+      <div className={styles.tablecontainer}>
       <table className={styles.pokemontable}>
         <thead>
           <tr>
@@ -81,6 +82,7 @@ const PokemonTable = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
